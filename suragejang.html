@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수라게장 SURAGEJANG | Korean restaurant | 明洞美食 | カンジャンケジャン </title>
+<meta name="description" content="도심 속 작은 궁궐에서 선보이는 간장게장 수라게장. 명동 게장, Myeongdong Korean restaurant">
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Serif+JP:wght@500;700&family=Noto+Serif+SC:wght@500;700&family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- ===== Google Analytics 4 : G-XXXXXXXXXX 부분을 실제 측정 ID로 교체 ===== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- ===== LocalBusiness 구조화 데이터 : 실제 정보로 값 교체 ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "수라게장 명동본점",
+  "image": "https://sutga.com/images/main.jpg",
+  "url": "https://sutga.com",
+  "telephone": "+82-10-8360-4679",
+  "priceRange": "₩₩₩",
+  "servesCuisine": "Korean food",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "명동10길 18 2층",
+    "addressLocality": "중구",
+    "addressRegion": "서울",
+    "postalCode": "04536",
+    "addressCountry": "KR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.5628447,
+    "longitude": 126.9853143
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "24:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/sura_gejang",
+    "https://naver.me/5L7Qb9oS"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --accent:#8B7760;
+    --dark:#231F1C;
+    --dark-alt:#2B241E;
+    --cream:#FAF7F2;
+    --cream-alt:#F0E9DC;
+    --ph-bg:#EFE7DC;
+    --ph-border:#C7B9A5;
+    --ph-text:#8A7B65;
+    --text-body:#5C5347;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  section[id]{scroll-margin-top:80px;}
+  body{
+    margin:0;
+    font-family:'Noto Sans KR','Noto Sans JP','Noto Sans SC','Noto Sans TC',sans-serif;
+    background:var(--cream);
+    color:#231F1C;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+  html:lang(ja) body, html:lang(zh-Hant) body,
+  html:lang(ja) *, html:lang(zh-Hant) *{
+    word-break:normal;overflow-wrap:break-word;
+  }
+  .about-text,.location-info,.location .ph,.menu-card{min-width:0;}
+  .footer-info > div{min-width:0;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .disp{font-family:'Noto Serif KR','Noto Serif JP','Noto Serif SC','Noto Serif TC',serif;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  .ph{
+    display:flex;align-items:center;justify-content:center;
+    background:var(--ph-bg);border:1px dashed var(--ph-border);
+    color:var(--ph-text);font-size:14px;text-align:center;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:52px;padding:0 32px;border-radius:999px;
+    font-size:16px;font-weight:700;cursor:pointer;
+    border:1.5px solid transparent;
+    transition:background 0.2s ease, transform 0.1s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn.solid{background:var(--accent);color:var(--cream);}
+  .btn.outline-light{border-color:#5A5044;color:var(--cream);}
+  .btn.outline-dark{border-color:#C7B9A5;color:#231F1C;}
+  .btn.outline-light:hover{background:var(--accent);color:var(--cream);border-color:var(--accent);}
+  .btn.outline-dark:hover{background:#231F1C;color:var(--cream);border-color:#231F1C;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:#1A1713;border-bottom:1px solid #1A1713;
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:76px;max-width:1200px;margin:0 auto;padding:0 24px;
+  }
+  .logo{
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:0.5px;
+    color:var(--cream);
+  }
+  .logo-wrap{display:flex;align-items:center;gap:10px;}
+  .logo-mark{height:44px;width:auto;}
+  .nav-links{display:flex;align-items:center;gap:32px;font-size:15px;font-weight:500;color:var(--cream);}
+  .nav-right{display:flex;align-items:center;gap:16px;}
+  .lang-dropdown{position:relative;}
+  .lang-trigger{
+    display:flex;align-items:center;gap:8px;
+    height:40px;padding:0 16px;
+    border:1px solid var(--cream);border-radius:999px;
+    background:transparent;color:var(--cream);
+    font-size:14px;font-weight:600;cursor:pointer;
+  }
+  .lang-menu{
+    display:none;position:absolute;top:calc(100% + 8px);right:0;
+    background:#231F1C;border-radius:14px;overflow:hidden;
+    min-width:140px;box-shadow:0 12px 32px rgba(0,0,0,0.25);
+    z-index:200;
+  }
+  .lang-menu.open{display:block;}
+  .lang-menu button{
+    display:block;width:100%;text-align:left;
+    padding:14px 20px;border:none;background:transparent;
+    color:var(--cream);font-size:15px;cursor:pointer;
+  }
+  .lang-menu button:hover{background:#2B241E;}
+  .lang-menu button.active{background:var(--accent);color:var(--cream);}
+  .nav .btn{height:40px;padding:0 20px;font-size:14px;}
+
+  @media (max-width:900px){
+    .nav-links{display:none;}
+  }
+
+  @media (max-width:480px){
+    .nav{height:auto;padding:12px 16px;}
+    .logo{font-size:14px;white-space:nowrap;}
+    .logo-mark{height:32px;}
+    .nav-right{gap:6px;}
+    .lang-trigger{font-size:12px;padding:0 10px;white-space:nowrap;gap:4px;}
+    .lang-trigger span{white-space:nowrap;}
+    .lang-trigger svg{width:13px;height:13px;}
+    .lang-menu{left:auto;right:0;}
+    .nav .btn{font-size:12px;padding:0 12px;white-space:nowrap;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:70vh;
+    background:var(--dark);
+    display:flex;align-items:flex-end;overflow:hidden;
+  }
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0) 65%);
+  }
+  .hero-content{position:relative;z-index:2;max-width:900px;padding:0 48px 64px;margin:0 auto;width:100%;}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:4px;color:#E7B25C;margin-bottom:16px;}
+  .hero h1{font-size:clamp(28px,4.2vw,46px);line-height:1.3;color:var(--cream);margin:0 0 16px;font-weight:700;}
+  .hero p{font-size:16px;line-height:1.7;color:#D8CFC2;margin:0;}
+  .hero-content h1, .hero-content p, .hero-content .eyebrow{text-shadow:0 2px 12px rgba(0,0,0,0.6);}
+
+  /* ---------- ABOUT (1/2/3) ---------- */
+  .about{
+    display:flex;align-items:center;justify-content:center;gap:64px;
+    padding:80px 24px;max-width:1200px;margin:0 auto;
+  }
+  .about.reverse{flex-direction:row-reverse;}
+  .about .ph{width:100%;max-width:460px;height:320px;border-radius:20px;flex:1 1 400px;}
+  .about-img{
+    width:460px;max-width:100%;height:320px;
+    border-radius:20px;object-fit:cover;flex-shrink:0;display:block;
+  }
+  .about-text{flex:1 1 400px;max-width:560px;}
+  .about-text .eyebrow{color:var(--accent);}
+  .about-text h2{font-size:clamp(24px,3vw,32px);margin:0 0 18px;font-weight:700;line-height:1.4;}
+  .about-text p{font-size:16px;line-height:1.85;color:var(--text-body);margin:0 0 16px;}
+  .about-text p:last-child{margin-bottom:0;}
+  .about-alt{background:var(--cream-alt);}
+
+  @media (max-width:800px){
+    .about,.about.reverse{flex-direction:column;align-items:stretch;padding:32px 20px;gap:20px;min-height:0;height:auto;}
+    .about-img{width:100%;max-width:none;flex:none;height:auto;min-height:0;aspect-ratio:4/3;object-fit:cover;}
+    .about-text{width:100%;max-width:none;flex:none;flex-basis:auto;margin:0;padding:0;height:auto;min-height:0;}
+    .about-text p{margin:0 0 12px;}
+    .about-text p:last-child{margin-bottom:0;}
+  }
+
+  /* ---------- MENU / REVIEW (구글 연동 섹션) ---------- */
+  .linkout{padding:80px 24px;text-align:center;}
+  .linkout.dark{background:var(--dark);}
+  .linkout-inner{max-width:600px;margin:0 auto;}
+  .linkout .eyebrow{margin-bottom:16px;}
+  .linkout.dark .eyebrow{color:#E7B25C;}
+  .linkout:not(.dark) .eyebrow{color:var(--accent);}
+  .linkout h2{font-size:32px;margin:0 0 16px;font-weight:700;}
+  .linkout.dark h2{color:var(--cream);}
+  .linkout p{font-size:15px;line-height:1.7;margin:0 0 32px;}
+  .linkout.dark p{color:#9C9186;}
+  .linkout:not(.dark) p{color:#8A7B65;}
+
+  .menu-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+    margin:40px 0 0;text-align:left;
+  }
+  .menu-card{background:#2B241E;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;}
+  .menu-card img{width:100%;height:160px;object-fit:cover;}
+  .menu-card-body{padding:18px;flex:1;display:flex;flex-direction:column;}
+  .menu-name{font-size:16px;font-weight:700;color:var(--cream);margin-bottom:4px;}
+  .menu-desc{font-size:13px;color:#9C9186;margin-bottom:10px;line-height:1.5;}
+  .menu-price{font-size:15px;font-weight:700;color:#E7B25C;margin-top:auto;}
+
+  @media (max-width:900px){
+    .menu-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:520px){
+    .menu-grid{grid-template-columns:1fr;}
+  }
+
+  .review-marquee{
+    overflow:hidden;padding:20px 0;
+    -webkit-mask-image:linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image:linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .review-track{display:flex;gap:20px;width:max-content;animation:scroll-left 50s linear infinite;}
+  @media (max-width:600px){
+    .review-track{animation-duration:180s;}
+  }
+  .review-marquee:hover .review-track{animation-play-state:paused;}
+  .review-card{flex:0 0 320px;background:var(--cream-alt);border-radius:16px;padding:24px;}
+  .review-stars{display:flex;align-items:center;justify-content:space-between;color:#E7B25C;font-size:15px;margin-bottom:12px;}
+  .review-flag{width:22px;height:16px;border-radius:3px;object-fit:cover;flex-shrink:0;}
+  .review-text{
+    font-size:14px;line-height:1.7;color:var(--text-body);margin:0 0 16px;
+    display:-webkit-box;-webkit-line-clamp:6;line-clamp:6;
+    -webkit-box-orient:vertical;overflow:hidden;
+  }
+  .review-card{min-width:0;}
+  .review-author{font-size:13px;font-weight:700;color:#8A7B65;}
+  /* 리뷰 카드는 왼쪽 정렬 (섹션 가운데 정렬 상속 방지) */
+  .review-card{text-align:left;}
+  /* 일본어/중국어 리뷰: 한국어 화면에서도 글자 단위로 줄바꿈 + 문장부호(、。，)가 줄 맨 앞에 오지 않게
+     → <p class="review-text">에 lang="ja" / lang="zh-Hant"가 있어야 적용됨 */
+  .review-text:lang(ja), .review-text:lang(zh-Hant){word-break:normal;line-break:strict;}
+
+  @keyframes scroll-left{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  /* ---------- LOCATION ---------- */
+  .location{display:flex;background:var(--cream-alt);max-width:1200px;margin:30px auto 0;}
+  .location .ph{flex:1 1 55%;min-height:420px;border:none;padding:80px 40px;box-sizing:border-box;background:var(--cream-alt);}
+  .location-info{flex:1 1 45%;max-width:480px;padding:80px 64px;box-sizing:border-box;}
+  .location-info h2{font-size:28px;margin:0 0 28px;font-weight:700;}
+  .info-row{margin-bottom:18px;}
+  .info-row .label{font-size:13px;font-weight:700;color:#8A7B65;margin-bottom:4px;}
+  .info-row .value{font-size:16px;color:#231F1C;}
+  .map-inner{width:100%;height:100%;border-radius:20px;overflow:hidden;}
+  .map-inner iframe{width:100%;height:100%;display:block;}
+
+  @media (max-width:800px){
+    .location{flex-direction:column;width:100%;margin:0;}
+    .location .ph{width:100%;min-height:0;padding:32px 20px;flex:none;}
+    .map-inner{width:100%;height:260px;}
+    .location-info{width:100%;max-width:none;padding:32px 20px;flex:none;}
+  }
+
+  /* ---------- ACTION BUTTONS ---------- */
+  .actions{background:var(--dark);padding:80px 24px;text-align:center;}
+  .actions h2{font-size:28px;color:var(--cream);margin:0 0 32px;font-weight:700;}
+  .action-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:1000px;margin:0 auto;}
+  .action-grid .btn{white-space:nowrap;flex:0 1 auto;}
+  @media (max-width:700px){
+    .action-grid .btn{flex:1 1 calc(50% - 8px);}
+  }
+  @media (max-width:800px){
+    .actions{padding:32px 20px;}
+    .location-spacer{display:none;}
+    .linkout{padding:32px 20px 56px;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#1A1713;padding:56px 24px 40px;}
+  .footer-top{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    border-bottom:1px solid #34302A;padding-bottom:28px;margin-bottom:20px;
+    max-width:1200px;margin-left:auto;margin-right:auto;
+  }
+  .footer-top .logo{color:var(--cream);}
+  .footer-info{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:8px 24px;
+    font-size:13px;line-height:2;color:#8A7B65;
+    max-width:1200px;margin:0 auto;
+  }
+  @media (max-width:800px){
+    .footer-info{grid-template-columns:1fr 1fr;}
+  }
+
+  /* ---------- FLOATING CTA ---------- */
+  .floating-cta{position:fixed;bottom:24px;right:24px;display:flex;flex-direction:column;gap:12px;z-index:999;}
+  .floating-btn{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    height:52px;padding:0 24px;border-radius:999px;
+    font-size:15px;font-weight:700;text-decoration:none;white-space:nowrap;
+    box-shadow:0 8px 24px rgba(0,0,0,0.18);transition:transform 0.15s ease;
+    border:none;font-family:inherit;cursor:pointer;
+  }
+  .floating-btn:hover{transform:translateY(-2px);}
+  .floating-btn.reserve{background:var(--accent);color:var(--cream);}
+  .floating-btn.call{background:var(--dark);color:var(--cream);}
+  .reserve-dropdown{position:relative;}
+  .reserve-menu{
+    display:none;position:absolute;bottom:calc(100% + 12px);right:0;
+    background:#1A1713;border-radius:16px;overflow:hidden;
+    min-width:200px;box-shadow:0 12px 32px rgba(0,0,0,0.25);
+  }
+  .reserve-menu.open{display:block;}
+  .reserve-menu a{
+    display:block;padding:16px 20px;color:var(--cream);
+    font-size:15px;font-weight:600;white-space:nowrap;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .reserve-menu a:last-child{border-bottom:none;}
+  .reserve-menu a:hover{background:var(--accent);}
+
+  @media (max-width:640px){
+    .reserve-menu{right:auto;left:50%;transform:translateX(-50%);}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header>
+  <div class="nav">
+    <div class="logo-wrap">
+      <img src="images/logo.png" alt="" class="logo-mark">
+      <span class="logo" data-i18n data-i18n-en="SURAGEJANG MYEONGDONG" data-i18n-ja="SURAGEJANG MYEONGDONG" data-i18n-zh="SURAGEJANG MYEONGDONG">수라게장 명동본점</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#about1" data-i18n data-i18n-en="About" data-i18n-ja="紹介" data-i18n-zh="关于我们">소개</a>
+      <a href="#menu" data-i18n data-i18n-en="Menu" data-i18n-ja="メニュー" data-i18n-zh="菜单">메뉴</a>
+      <a href="#review" data-i18n data-i18n-en="Reviews" data-i18n-ja="レビュー" data-i18n-zh="评价">리뷰</a>
+      <a href="#location" data-i18n data-i18n-en="Location" data-i18n-ja="場所・営業時間" data-i18n-zh="位置・时间">위치·시간</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-dropdown">
+        <button type="button" class="lang-trigger" onclick="toggleLangMenu()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 1 0 20"/>
+          </svg>
+          <span id="langLabel">한국어</span>
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <button type="button" class="active" onclick="setLang('ko','한국어',this)">한국어</button>
+          <button type="button" onclick="setLang('en','EN',this)">EN</button>
+          <button type="button" onclick="setLang('ja','日本語',this)">日本語</button>
+          <button type="button" onclick="setLang('zh','中文',this)">中文</button>
+        </div>
+      </div>
+      <a href="#reserve" class="btn solid" data-i18n data-i18n-en="Reserve" data-i18n-ja="予約する" data-i18n-zh="立即预约" onclick="gtag('event','reservation_click')">예약하기</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img src="images/hero.jpeg" alt="수라게장 명동본점 간장게장" class="hero-img">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">MYEONGDONG · SOY CRAB</div>
+    <h1 class="disp" data-i18n data-i18n-en="Soy-Marinated Crab, <br>Fit for a King" data-i18n-ja="王の御膳に上る醤油蟹" data-i18n-zh="登上御膳的酱蟹">수라상에 오른 간장게장</h1>
+    <p data-i18n data-i18n-en="The dignity of a royal table, faithfully preserved." data-i18n-ja="王が召し上がった御膳の品格を、そのまま込めました。" data-i18n-zh="王者御膳的品格，原汁原味呈现。">왕이 마주하던 밥상의 품격, 그대로 담았습니다.</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT 1 ===== -->
+<section class="about" id="about1">
+  <img src="images/about1.jpeg" alt="수라게장 매장 전경" class="about-img">
+  <div class="about-text">
+    <div class="eyebrow">01 · STORY</div>
+    <h2 class="disp" data-i18n data-i18n-en="Preserving the Dignity<br>of the Royal Table" data-i18n-ja="王の御膳の品格を<br>そのまま込めて" data-i18n-zh="御膳的品格<br>原汁呈现">수라상의 품격을 그대로 담다</h2>
+    <p data-i18n data-i18n-en="Sura-sang was the table set before the Joseon kings each day. Only one kind of food could be placed upon it: the &lsquo;real&rsquo; dishes made from carefully selected ingredients and true dedication. We carry that same spirit, serving our guests &lsquo;soy-marinated crab fit for the royal table.&rsquo;" data-i18n-ja="王の御膳とは、朝鮮の王が毎日召し上がった食卓のこと。そこに上がることができた料理はただ一つ、厳選された材料と真心で作られた「本物」の料理だけでした。私たちはその精神をそのまま受け継ぎ、お客様に「御膳に上る醤油蟹」をお出ししています。" data-i18n-zh="御膳，是朝鲜国王每日面对的餐桌。能登上御膳的食物只有一种，那就是用精选食材与用心制作而成的&ldquo;真正&rdquo;的料理。我们秉承这份精神，为客人奉上&ldquo;登上御膳的酱蟹&rdquo;。">조선의 왕이 매일 마주하던 밥상, 수라상. 그곳에 오를 수 있었던 음식은 오직 하나, 엄선된 재료와 정성으로 만든 '진짜' 음식뿐이었습니다. 저희는 그 정신을 그대로 담아, 손님들 앞에 '수라상에 오른 간장게장'을 대접합니다.</p>
+    <p data-i18n data-i18n-en="Ganjang gejang has long been treated as a prized dish — from the royal sura-sang of the Joseon court to an essential centerpiece of today's fine Korean dining. Sura Gejang honors that tradition, serving every meal with the dignity of a small palace in the heart of the city." data-i18n-ja="醤油蟹は、朝鮮王朝の御膳から現代の韓定食に欠かせない高級メニューになるまで、長らく大切に扱われてきた料理です。水刺ケジャンはその伝統を忘れず、都心の小さな宮殿で御膳にふさわしい一食を心を込めてお出しします。" data-i18n-zh="酱蟹自朝鲜王朝的御膳，到如今成为高级韩定食中不可或缺的招牌菜，一直备受珍视。水剌蟹酱不忘这份传统，在都市中的这座小小&ldquo;宫殿&rdquo;里，用心奉上一顿配得上御膳品格的料理。">간장게장은 궁중에서 임금이 드시던 식사상 수라상부터, 오늘날 한정식에 빠질 수 없는 최고급 메뉴로 자리잡기까지 오랜 시간 귀한 대접을 받아온 음식입니다. 수라게장은 그 전통을 잊지 않고, 도심 속 작은 궁궐에서 수라의 품격에 어울리는 한 끼를 정성껏 올립니다.</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT 2 ===== -->
+<section class="about reverse about-alt">
+  <img src="images/about2.jpeg" alt="연평도 제철 암꽃게" class="about-img">
+  <div class="about-text">
+    <div class="eyebrow">02 · INGREDIENTS</div>
+    <h2 class="disp" data-i18n data-i18n-en="Only Seasonal Female Crab<br>from Yeonpyeong Island" data-i18n-ja="延坪島産、旬の雌ワタリガニだけ" data-i18n-zh="只选延坪岛当季雌蟹">연평도 제철 암꽃게만</h2>
+    <p data-i18n data-i18n-en="The flavor of ganjang gejang comes down to the freshness of the crab itself. We use only seasonal female crab caught in the waters off Yeonpyeong Island, hand-selecting each one for its rich roe through a strict screening process. Preserving that traditional flavor, no matter the season or catch, is our guiding principle." data-i18n-ja="醤油蟹の味は、蟹そのものの鮮度で決まります。私たちは延坪島の海域で獲れた旬の雌ワタリガニだけを厳選し、卵がぎっしり詰まった蟹だけを選び抜く厳しい選別工程を経ています。季節や産地が変わっても変わらない伝統の味を守ること、それが私たちの原則です。" data-i18n-zh="酱蟹的味道取决于螃蟹本身的新鲜度。我们只选用在延坪岛海域捕获的当季雌蟹，并经过严格筛选，挑出蟹黄饱满的螃蟹。无论季节与产地如何变化，坚守这份传统风味，就是我们的原则。">간장게장의 맛은 게 자체의 신선도에서 결정됩니다. 저희는 연평도 해역에서 잡힌 제철 암꽃게만을 엄선하여 사용하며, 알이 꽉 찬 암게만을 골라내는 까다로운 선별 과정을 거칩니다. 계절과 산지가 바뀌어도 변하지 않는 전통의 맛을 지켜내는 것, 그것이 저희의 원칙입니다.</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT 3 ===== -->
+<section class="about">
+  <img src="images/about3.jpeg" alt="갓 지은 쌀밥과 간장게장 한상" class="about-img">
+  <div class="about-text">
+    <div class="eyebrow">03 · TASTE</div>
+    <h2 class="disp" data-i18n data-i18n-en="A Full Table,<br>a True Rice Thief" data-i18n-ja="一膳いっぱいの、<br>本物のご飯泥棒" data-i18n-zh="满满一桌，<br>真正的下饭神器">한 상 가득, 진짜 밥도둑</h2>
+    <p data-i18n data-i18n-en="Deeply aged ganjang gejang meets freshly steamed rice to create a true &lsquo;rice thief&rsquo; — the dish so good it makes you eat bowl after bowl. Add 1++ Korean beef yukhoe, spicy sura crab stew, and seafood pancake, and you have a hearty table that goes far beyond a single plate of crab." data-i18n-ja="じっくり熟成させた醤油蟹が、炊きたての温かいご飯と出会うことで完成する本物の「ご飯泥棒」。ここに1++韓牛ユッケ、ピリ辛の水刺ワタリガニ鍋、海鮮チヂミまで加わり、蟹一皿だけでは終わらない、ボリューム満点の食卓をお届けします。" data-i18n-zh="深度熟成的酱蟹与刚出锅的热米饭相遇，成就了真正的&ldquo;下饭神器&rdquo;。再加上1++韩牛生拌肉、香辣的水剌螃蟹汤，以及海鲜煎饼——不止一碟酱蟹，而是满满一桌丰盛的美味。">숙성된 깊은 맛의 간장게장이 갓 지은 따뜻한 쌀밥과 만나 완성되는 진짜 '밥도둑'. <br>여기에 한우 1++ 육회, 얼큰한 수라꽃게탕, 해물파전까지 — 게장 한 접시로 끝나지 않는 든든한 한 상을 차려냅니다.</p>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section class="linkout dark" id="menu">
+  <div class="linkout-inner" style="max-width:1000px;">
+    <div class="eyebrow">MENU</div>
+    <h2 class="disp" data-i18n data-i18n-en="Signature Menu" data-i18n-ja="代表メニュー" data-i18n-zh="招牌菜单">대표 메뉴</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="images/menu-set.jpeg" alt="수라게장 2인정식">
+        <div class="menu-card-body">
+          <div class="menu-name" data-i18n data-i18n-en="Sura Gejang Set for Two" data-i18n-ja="水刺ケジャン2人前セット" data-i18n-zh="水剌蟹酱双人套餐">수라게장 2인정식</div>
+          <div class="menu-desc" data-i18n data-i18n-en="2 soy-marinated crabs, 2 marinated shrimp, 9 side dishes, japchae, 2 bowls of rice" data-i18n-ja="醤油蟹2匹、海老の醤油漬け2匹、おかず9品、チャプチェ2人前、ご飯2人前" data-i18n-zh="酱蟹2只、酱虾2只、小菜9种、杂菜2人份、米饭2碗">간장게장 2마리, 새우장 2마리, 반찬 9종, 잡채 2인분, 공기밥 2인분</div>
+          <div class="menu-price" data-i18n data-i18n-en="₩98,000" data-i18n-ja="98,000ウォン" data-i18n-zh="98,000韩元">98,000원</div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/menu-add.jpeg" alt="수라게장 1마리 추가">
+        <div class="menu-card-body">
+          <div class="menu-name" data-i18n data-i18n-en="Extra Sura Gejang (1 crab)" data-i18n-ja="水刺ケジャン1匹追加" data-i18n-zh="水剌蟹酱加点1只">수라게장 1마리 추가</div>
+          <div class="menu-desc" data-i18n data-i18n-en="Add-on only! Fresh spring female crab from Yeonpyeong Island" data-i18n-ja="追加注文のみ！延坪島の新鮮な春の雌ワタリガニ" data-i18n-zh="仅限加点！延坪岛新鲜春季雌蟹">추가 주문만 가능! 연평도 해역에서 잡아올린 신선한 봄철 암게</div>
+          <div class="menu-price" data-i18n data-i18n-en="₩49,000" data-i18n-ja="49,000ウォン" data-i18n-zh="49,000韩元">49,000원</div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/menu-yangnyeom.jpeg" alt="양념게장 1마리">
+        <div class="menu-card-body">
+          <div class="menu-name" data-i18n data-i18n-en="Spicy Marinated Crab (1)" data-i18n-ja="ヤンニョムケジャン1匹" data-i18n-zh="辣味酱蟹1只">양념게장 1마리</div>
+          <div class="menu-desc" data-i18n data-i18n-en="Our signature recipe with rich, sweet-and-spicy flavor" data-i18n-ja="水刺ケジャンならではの秘伝レシピで、コクのある甘辛い味わい" data-i18n-zh="独家秘方，鲜甜微辣，回味无穷">수라게장만의 특별한 레시피로 감칠맛과 달고 매운맛</div>
+          <div class="menu-price" data-i18n data-i18n-en="₩43,000" data-i18n-ja="43,000ウォン" data-i18n-zh="43,000韩元">43,000원</div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/menu-ggotgetang.jpeg" alt="수라꽃게탕">
+        <div class="menu-card-body">
+          <div class="menu-name" data-i18n data-i18n-en="Sura Crab Stew" data-i18n-ja="水刺ワタリガニ鍋" data-i18n-zh="水剌螃蟹汤">수라꽃게탕</div>
+          <div class="menu-desc" data-i18n data-i18n-en="Mild, savory broth with sura crab and seafood" data-i18n-ja="辛すぎない旨味たっぷりのスープに、水刺ワタリガニと海鮮を合わせました" data-i18n-zh="不辣的浓香汤底，加入水剌螃蟹与海鲜">맵지 않은 얼큰한 육수에 수라꽃게와 해물</div>
+          <div class="menu-price" data-i18n data-i18n-en="₩48,000" data-i18n-ja="48,000ウォン" data-i18n-zh="48,000韩元">48,000원</div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:40px;" data-i18n data-i18n-en="We also offer yukhoe-tangtangi, soft tofu stew, and more." data-i18n-ja="この他にも、ユッケタンタンイ、スンドゥブチゲなど多彩なメニューをご用意しております。" data-i18n-zh="此外还有生拌肉拌菜、嫩豆腐锅等多种菜品可供选择。">이 외에도 육회탕탕이, 순두부찌개 등 다양한 메뉴가 준비되어 있습니다.</p>
+    <a href="https://share.google/bVx0yEXF4bZxezbdD" target="_blank" rel="noopener" class="btn solid" data-i18n data-i18n-en="View Full Menu on Google" data-i18n-ja="Googleで全メニューを見る" data-i18n-zh="在谷歌查看完整菜单" onclick="gtag('event','menu_link_click')">전체 메뉴 확인하기</a>
+  </div>
+</section>
+
+<!-- ===== REVIEW ===== -->
+<section class="linkout" id="review">
+  <div class="linkout-inner">
+    <div class="eyebrow">REVIEW</div>
+    <h2 class="disp" data-i18n data-i18n-en="Customer Reviews" data-i18n-ja="お客様の声" data-i18n-zh="顾客评价">고객 리뷰</h2>
+    <p data-i18n data-i18n-en="See real reviews from our guests around the world." data-i18n-ja="世界中からお越しいただいたお客様のリアルな口コミをご覧ください。" data-i18n-zh="欢迎查看来自世界各地顾客的真实评价。">수라게장을 방문하신 글로벌 고객님들의 생생한 리뷰를 확인하세요.</p>
+  </div>
+  <div class="review-marquee">
+    <div class="review-track">
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/kr.svg" alt="한국" class="review-flag"></div>
+        <p class="review-text">간장게장 정말 신선하고 비린 맛이 전혀 없어서 너무 맛있게 먹었습니다! 알도 가득 차 있고 살도 꽉 차 있어서 밥도둑이라는 말이 딱 맞네요. 양념도 짜지 않고 감칠맛이 좋아 끝까지 맛있게 먹었어요. 반찬도 깔끔하게 잘 나오고 전체적으로 푸짐해서 만족스러운 한 끼였습니다. 직원분들도 친절하셔서 기분 좋게 식사하고 왔어요. 다음에도 간장게장 먹으러 재방문하고 싶습니다.</p>
+        <div class="review-author">[강*지]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/us.svg" alt="미국" class="review-flag"></div>
+        <p class="review-text">We had a really good meal here. The soy marinated crab was fresh and full of flavor, and the braised short ribs were tender and delicious. The steamed egg was soft and fluffy, and all of the side dishes were tasty too. Everything came out fresh, and the portions were generous. Friendly service and definitely a place we'd come back to.</p>
+        <div class="review-author">[H* V****t]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/tw.svg" alt="대만" class="review-flag"></div>
+        <p class="review-text" lang="zh-Hant">我們是來自台灣的旅客！這次特地來吃水刺醬蟹，真的完全沒有讓我們失望。醬蟹非常新鮮，吃起來一點腥味都沒有，蟹膏配著白飯吃超級好吃！而且店員的服務態度非常親切，讓我們有一頓很溫暖、很棒的用餐體驗。真心推薦給大家！</p>
+        <div class="review-author">[黃*賢]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/jp.svg" alt="일본" class="review-flag"></div>
+        <p class="review-text" lang="ja">明洞駅徒歩3分。年中無休で24時まで営業しており、夜遅くの食事にも便利。全席に日本語対応タブレットが完備されているため、観光客も安心して利用できる人気店です。鮮魚店直営の強みを活かし、旬の雌ワタリガニのみを厳選。臭みのない濃厚な内子と秘伝のタレが絶品。おかず9品が並ぶ豪華な定食スタイルで、本場王様の味を楽しめます。木の温もり溢れる韓屋風の伝統美と、洗練されたモダンさが共存する上質な空間。王宮のような落ち着いた雰囲気は、大切な日の会食や韓国らしさを満喫したい観光にぴったりです。</p>
+        <div class="review-author">[フー****あい]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/kr.svg" alt="한국" class="review-flag"></div>
+        <p class="review-text">근처 지나가다 게장이 먹고 싶어 방문했습니다. 전체적인 매장 분위기와 나오는 음식이 정갈하고 깔끔해서 보기 좋았습니다. 나오는 반찬도 다양해서 여러가지 조합으로 경험하기도 좋았고 자칫 짜거나 비릴 수 있는 게장도 전혀 문제 없었습니다. 특히 사용되는 꽃게가 살도 꽉 차있고 알도 한가득 배고 있어서 정말 좋은 재료 사용하는게 보였습니다. 매장 직원분들의 세심한 서비스로 편안하고 즐거운 식사시간 가졌습니다. 부모님 모시고 식사하기도 좋고 외국분들에게 한식 소개하기도 좋아 보였습니다. 자극적인 음식에 지쳐 있다가 오랜만에 깔끔하고 정갈한 한식 경험해서 좋았고 다음에 재방문 하겠습니다.</p>
+        <div class="review-author">[밤*]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/us.svg" alt="미국" class="review-flag"></div>
+        <p class="review-text">Set menu for 2 people is very good. The soy-marinated raw crab here is absolutely incredible, featuring perfectly sweet, custardy meat and an abundance of rich orange roe. The soy brine is exceptionally well-balanced, making it the perfect companion when you mix warm rice directly into the crab shell. It is hands-down the best ganjang gejang experience in Seoul</p>
+        <div class="review-author">[T*** U*]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/tw.svg" alt="대만" class="review-flag"></div>
+        <p class="review-text" lang="zh-Hant">首爾必吃醬蟹清單再+1！這家店的醬油醬蟹真的非常驚艷，螃蟹處理得非常乾淨，完全沒有腥味，蟹肉飽滿鮮甜，尤其是蟹膏的部分，拌入白飯簡直是絕配！整體用餐環境舒適，服務也相當專業，絕對是值得再訪的好店。推薦給來首爾想嘗試道地醬蟹的朋友</p>
+        <div class="review-author">[E*** S*]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/jp.svg" alt="일본" class="review-flag"></div>
+        <p class="review-text" lang="ja">明洞にある有名なケジャンのお店すら、カンジャンケジャンに初めてお友達4人と行ってきました。カニの卵がぎっしり詰まったケジャンをみんなで美味しくいただきました。今回はスカジャンケジャン4人前を頼んでみました。おかずもたくさん付いていて、茶茶やキムチ、サラダ、卵焼き、カンジャンセウなどもありました。カジャンがご飯とほんとに相性が良くてご飯を何回もおかわりするほどおいしかったです。洞に行った時は、絶対にこの店行ったほうがいいと思いました！</p>
+        <div class="review-author">[グ**・旅・E**]</div>
+      </div>
+      <!-- 아래는 위 8개를 그대로 복제 (끊김 없이 반복되게 하려면 필수) -->
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/kr.svg" alt="한국" class="review-flag"></div>
+        <p class="review-text">간장게장 정말 신선하고 비린 맛이 전혀 없어서 너무 맛있게 먹었습니다! 알도 가득 차 있고 살도 꽉 차 있어서 밥도둑이라는 말이 딱 맞네요. 양념도 짜지 않고 감칠맛이 좋아 끝까지 맛있게 먹었어요. 반찬도 깔끔하게 잘 나오고 전체적으로 푸짐해서 만족스러운 한 끼였습니다. 직원분들도 친절하셔서 기분 좋게 식사하고 왔어요. 다음에도 간장게장 먹으러 재방문하고 싶습니다.</p>
+        <div class="review-author">[강*지]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/us.svg" alt="미국" class="review-flag"></div>
+        <p class="review-text">We had a really good meal here. The soy marinated crab was fresh and full of flavor, and the braised short ribs were tender and delicious. The steamed egg was soft and fluffy, and all of the side dishes were tasty too. Everything came out fresh, and the portions were generous. Friendly service and definitely a place we'd come back to.</p>
+        <div class="review-author">[H* V****t]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/tw.svg" alt="대만" class="review-flag"></div>
+        <p class="review-text" lang="zh-Hant">我們是來自台灣的旅客！這次特地來吃水刺醬蟹，真的完全沒有讓我們失望。醬蟹非常新鮮，吃起來一點腥味都沒有，蟹膏配著白飯吃超級好吃！而且店員的服務態度非常親切，讓我們有一頓很溫暖、很棒的用餐體驗。真心推薦給大家！</p>
+        <div class="review-author">[黃*賢]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/jp.svg" alt="일본" class="review-flag"></div>
+        <p class="review-text" lang="ja">明洞駅徒歩3分。年中無休で24時まで営業しており、夜遅くの食事にも便利。全席に日本語対応タブレットが完備されているため、観光客も安心して利用できる人気店です。鮮魚店直営の強みを活かし、旬の雌ワタリガニのみを厳選。臭みのない濃厚な内子と秘伝のタレが絶品。おかず9品が並ぶ豪華な定食スタイルで、本場王様の味を楽しめます。木の温もり溢れる韓屋風の伝統美と、洗練されたモダンさが共存する上質な空間。王宮のような落ち着いた雰囲気は、大切な日の会食や韓国らしさを満喫したい観光にぴったりです。</p>
+        <div class="review-author">[フー****あい]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/kr.svg" alt="한국" class="review-flag"></div>
+        <p class="review-text">근처 지나가다 게장이 먹고 싶어 방문했습니다. 전체적인 매장 분위기와 나오는 음식이 정갈하고 깔끔해서 보기 좋았습니다. 나오는 반찬도 다양해서 여러가지 조합으로 경험하기도 좋았고 자칫 짜거나 비릴 수 있는 게장도 전혀 문제 없었습니다. 특히 사용되는 꽃게가 살도 꽉 차있고 알도 한가득 배고 있어서 정말 좋은 재료 사용하는게 보였습니다. 매장 직원분들의 세심한 서비스로 편안하고 즐거운 식사시간 가졌습니다. 부모님 모시고 식사하기도 좋고 외국분들에게 한식 소개하기도 좋아 보였습니다. 자극적인 음식에 지쳐 있다가 오랜만에 깔끔하고 정갈한 한식 경험해서 좋았고 다음에 재방문 하겠습니다.</p>
+        <div class="review-author">[밤*]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/us.svg" alt="미국" class="review-flag"></div>
+        <p class="review-text">Set menu for 2 people is very good. The soy-marinated raw crab here is absolutely incredible, featuring perfectly sweet, custardy meat and an abundance of rich orange roe. The soy brine is exceptionally well-balanced, making it the perfect companion when you mix warm rice directly into the crab shell. It is hands-down the best ganjang gejang experience in Seoul</p>
+        <div class="review-author">[T*** U*]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/tw.svg" alt="대만" class="review-flag"></div>
+        <p class="review-text" lang="zh-Hant">首爾必吃醬蟹清單再+1！這家店的醬油醬蟹真的非常驚艷，螃蟹處理得非常乾淨，完全沒有腥味，蟹肉飽滿鮮甜，尤其是蟹膏的部分，拌入白飯簡直是絕配！整體用餐環境舒適，服務也相當專業，絕對是值得再訪的好店。推薦給來首爾想嘗試道地醬蟹的朋友</p>
+        <div class="review-author">[E*** S*]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★★★★★</span><img src="images/flags/jp.svg" alt="일본" class="review-flag"></div>
+        <p class="review-text" lang="ja">明洞にある有名なケジャンのお店すら、カンジャンケジャンに初めてお友達4人と行ってきました。カニの卵がぎっしり詰まったケジャンをみんなで美味しくいただきました。今回はスカジャンケジャン4人前を頼んでみました。おかずもたくさん付いていて、茶茶やキムチ、サラダ、卵焼き、カンジャンセウなどもありました。カジャンがご飯とほんとに相性が良くてご飯を何回もおかわりするほどおいしかったです。洞に行った時は、絶対にこの店行ったほうがいいと思いました！</p>
+        <div class="review-author">[グ**・旅・E**]</div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="https://share.google/bVx0yEXF4bZxezbdD" target="_blank" rel="noopener" class="btn outline-dark" data-i18n data-i18n-en="See All Reviews on Google" data-i18n-ja="Googleでレビューをすべて見る" data-i18n-zh="在谷歌查看全部评价" onclick="gtag('event','review_link_click')">리뷰 전체보기</a>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="location" id="location">
+  <div class="ph">
+    <div class="map-inner">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357ca39f4600402b%3A0xedd0de4fb4b4de64!2z7IiY65286rKM7J6lIOuqheuPmeuzuOygkA!5e0!3m2!1sko!2skr!4v1790142597542!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+  <div class="location-info">
+    <div class="eyebrow" style="color:var(--accent);margin-bottom:16px;">VISIT US</div>
+    <h2 class="disp" data-i18n data-i18n-en="Location &amp; Hours" data-i18n-ja="場所・営業時間" data-i18n-zh="位置・营业时间">위치 · 운영시간</h2>
+    <div class="info-row">
+      <div class="label" data-i18n data-i18n-en="Address" data-i18n-ja="住所" data-i18n-zh="地址">주소</div>
+      <div class="value" data-i18n data-i18n-en="18 Myeongdong 10-gil, Jung-gu, Seoul (2F)" data-i18n-ja="ソウル特別市中区明洞10キル18 2階" data-i18n-zh="首尔中区明洞10街18号2楼">서울특별시 중구 명동10길 18 2층</div>
+    </div>
+    <div class="info-row">
+      <div class="label" data-i18n data-i18n-en="Hours" data-i18n-ja="営業時間" data-i18n-zh="营业时间">운영시간</div>
+      <div class="value" data-i18n data-i18n-en="Daily 10:00 - 24:00<br>Last order 23:00" data-i18n-ja="毎日10:00 - 24:00<br>ラストオーダー23:00" data-i18n-zh="每日10:00 - 24:00<br>最后点餐23:00">매일 10:00 - 24:00 <br>라스트오더 23:00</div>
+    </div>
+    <div class="info-row">
+      <div class="label" data-i18n data-i18n-en="Phone" data-i18n-ja="電話" data-i18n-zh="电话">전화</div>
+      <div class="value">+82-10-8360-4679</div>
+    </div>
+  </div>
+</section>
+
+<div class="location-spacer" style="height:80px;background:var(--cream);"></div>
+
+<!-- ===== ACTION BUTTONS ===== -->
+<section class="actions" id="reserve">
+  <h2 class="disp" data-i18n data-i18n-en="Reservations &amp; Inquiries" data-i18n-ja="予約・お問い合わせ" data-i18n-zh="预约与咨询">예약 및 문의</h2>
+  <div class="action-grid">
+    <a href="https://www.catchtable.net/shop/suragejang" target="_blank" rel="noopener" class="btn outline-light" data-i18n data-i18n-en="CatchTable Reservation" data-i18n-ja="キャッチテーブル予約" data-i18n-zh="CatchTable预约" onclick="gtag('event','reservation_click',{method:'catchtable'})">캐치테이블 예약</a>
+    <a href="https://map.naver.com/p/entry/place/2025015878?c=14.96,0,0,0,dh&placePath=%2Fbooking%3FfromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609231551%26locale%3Dko%26svcName%3Dmap_pcv5" target="_blank" rel="noopener" class="btn outline-light" data-i18n data-i18n-en="Naver Reservation" data-i18n-ja="ネイバー予約" data-i18n-zh="Naver预约" onclick="gtag('event','reservation_click',{method:'naver'})">네이버 예약</a>
+    <a href="https://autoreserve.com/ko/restaurants/dtm53gCFGdhuft6DYiPD" target="_blank" rel="noopener" class="btn outline-light" data-i18n data-i18n-en="AutoReserve" data-i18n-ja="AutoReserve予約" data-i18n-zh="AutoReserve预约" onclick="gtag('event','reservation_click',{method:'catchtable'})">AutoReserve 예약</a>
+    <a href="tel:+82-10-8360-4679" class="btn outline-light" data-i18n data-i18n-en="Call Us" data-i18n-ja="電話する" data-i18n-zh="致电我们" onclick="gtag('event','phone_click')">전화하기</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="logo disp">수라게장 SURAGEJANG</div>
+  </div>
+  <div class="footer-info">
+    <div data-i18n data-i18n-en="Business Name: Sura Gejang" data-i18n-ja="屋号：水刺ケジャン" data-i18n-zh="商号：水剌蟹酱">상호명 : 수라게장</div>
+    <div data-i18n data-i18n-en="Representative: [Name]" data-i18n-ja="代表者：[代表者名]" data-i18n-zh="法定代表人：[代表人姓名]">대표자 : [대표자명]</div>
+    <div data-i18n data-i18n-en="Business Reg. No.: [000-00-00000]" data-i18n-ja="事業者登録番号：[000-00-00000]" data-i18n-zh="营业执照号：[000-00-00000]">사업자등록번호 : [000-00-00000]</div>
+    <div data-i18n data-i18n-en="Mail-order Business No.: [pending]" data-i18n-ja="通信販売業申告：[申告予定]" data-i18n-zh="通讯销售业申报：[待定]">통신판매업신고 : [제0000-서울동작-0000호]</div>
+    <div data-i18n data-i18n-en="Address: 18 Myeongdong 10-gil, Jung-gu, Seoul, 2F" data-i18n-ja="住所：ソウル特別市中区明洞10キル18 2階" data-i18n-zh="地址：首尔中区明洞10街18号2楼">주소 : 서울특별시 중구 명동10길 18 2층</div>
+    <div data-i18n data-i18n-en="Phone: +82-10-8360-4679" data-i18n-ja="電話：+82-10-8360-4679" data-i18n-zh="电话：+82-10-8360-4679">전화 : +82-10-8360-4679</div>
+    <div data-i18n data-i18n-en="Email: [contact@sutga.com]" data-i18n-ja="メール：[contact@sutga.com]" data-i18n-zh="邮箱：[contact@sutga.com]">이메일 : [contact@sutga.com]</div>
+    <div>© 2026 SUTGA</div>
+  </div>
+</footer>
+
+<!-- ===== 플로팅 예약/전화 버튼 ===== -->
+<div class="floating-cta">
+  <a href="tel:+82-10-8360-4679" class="floating-btn call" data-i18n data-i18n-en="Call" data-i18n-ja="電話" data-i18n-zh="电话" onclick="gtag('event','phone_click',{source:'floating'})">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    전화하기
+  </a>
+  <div class="reserve-dropdown">
+    <div class="reserve-menu" id="reserveMenu">
+      <a href="https://www.catchtable.net/shop/suragejang" target="_blank" rel="noopener" data-i18n data-i18n-en="CatchTable" data-i18n-ja="キャッチテーブル" data-i18n-zh="CatchTable" onclick="gtag('event','reservation_click',{method:'catchtable',source:'floating'})">캐치테이블</a>
+      <a href="https://map.naver.com/p/entry/place/2025015878?c=14.96,0,0,0,dh&placePath=%2Fbooking%3FfromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609231551%26locale%3Dko%26svcName%3Dmap_pcv5" target="_blank" rel="noopener" data-i18n data-i18n-en="Naver" data-i18n-ja="ネイバー" data-i18n-zh="Naver" onclick="gtag('event','reservation_click',{method:'naver',source:'floating'})">네이버</a>
+      <a href="https://autoreserve.com/ko/restaurants/dtm53gCFGdhuft6DYiPD" target="_blank" rel="noopener" data-i18n data-i18n-en="AutoReserve" data-i18n-ja="AutoReserve" data-i18n-zh="AutoReserve" onclick="gtag('event','reservation_click',{method:'autoreserve',source:'floating'})">AutoReserve</a>
+    </div>
+    <a href="javascript:void(0)" class="floating-btn reserve" data-i18n data-i18n-en="Reserve" data-i18n-ja="予約する" data-i18n-zh="立即预约" onclick="toggleReserveMenu()">예약하기</a>
+  </div>
+</div>
+
+<script>
+  function toggleLangMenu(){
+    document.getElementById('langMenu').classList.toggle('open');
+  }
+  function setLang(lang, label, btn){
+    document.documentElement.lang = (lang === 'zh') ? 'zh-Hant' : lang;
+    document.getElementById('langLabel').textContent = label;
+    document.querySelectorAll('.lang-menu button').forEach(function(b){
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    document.getElementById('langMenu').classList.remove('open');
+    var key = 'i18n' + lang.charAt(0).toUpperCase() + lang.slice(1);
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      if(!el.dataset.i18nKo){
+        el.dataset.i18nKo = el.innerHTML;
+      }
+      if(lang === 'ko'){
+        el.innerHTML = el.dataset.i18nKo;
+      } else if(el.dataset[key]){
+        el.innerHTML = el.dataset[key];
+      }
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.lang-dropdown')){
+      document.getElementById('langMenu').classList.remove('open');
+    }
+    if(!e.target.closest('.reserve-dropdown')){
+      document.getElementById('reserveMenu').classList.remove('open');
+    }
+  });
+  function toggleReserveMenu(){
+    document.getElementById('reserveMenu').classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
