@@ -378,8 +378,9 @@
   /* 제목은 두 줄 길이를 고르게, 문단은 마지막 줄에 한 글자만 남지 않게 */
   h1, h2, h3{text-wrap:balance;}
   p{text-wrap:pretty;}
-  /* <br class="pc-br"> : PC에서만 줄바꿈, 핸드폰(600px 이하)에서는 무시하고 자동 줄바꿈 */
-  @media (max-width:600px){ .pc-br{display:none;} }
+  /* <span class="phrase"> : 한 덩어리로 묶인 구절. 한 줄에 다 들어가면 한 줄로,
+     안 들어가면 구절과 구절 사이에서만 줄이 바뀜 (구절 중간에서 끊기지 않음) */
+  .phrase{display:inline-block;}
   /* 일본어 제목은 단어 덩어리 단위로 줄바꿈 (크롬) */
   html:lang(ja) h1, html:lang(ja) h2, html:lang(ja) h3{word-break:auto-phrase;}
 </style>
@@ -458,7 +459,7 @@
   <div class="about-text">
     <div class="eyebrow">03 · TASTE</div>
     <h2 class="disp">한 상 가득, 진짜 밥도둑</h2>
-    <p>숙성된 깊은 맛의 간장게장이 갓 지은 따뜻한 쌀밥과 만나 완성되는 진짜 '밥도둑'. <br class="pc-br">여기에 한우 1++ 육회, 얼큰한 수라꽃게탕, 해물파전까지 — 게장 한 접시로 끝나지 않는 든든한 한 상을 차려냅니다.</p>
+    <p>숙성된 깊은 맛의 간장게장이 갓 지은 따뜻한 쌀밥과 만나 완성되는 진짜 '밥도둑'. 여기에 한우 1++ 육회, 얼큰한 수라꽃게탕, 해물파전까지 — 게장 한 접시로 끝나지 않는 든든한 한 상을 차려냅니다.</p>
   </div>
 </section>
 
@@ -619,7 +620,7 @@
     </div>
     <div class="info-row">
       <div class="label">운영시간</div>
-      <div class="value">매일 10:00 - 24:00 <br>라스트오더 23:00</div>
+      <div class="value"><span class="phrase">매일 10:00 - 24:00</span> <span class="phrase">라스트오더 23:00</span></div>
     </div>
     <div class="info-row">
       <div class="label">전화</div>
