@@ -373,6 +373,15 @@
   @media (max-width:640px){
     .reserve-menu{right:auto;left:50%;transform:translateX(-50%);}
   }
+
+  /* ---------- 자동 줄바꿈 ---------- */
+  /* 제목은 두 줄 길이를 고르게, 문단은 마지막 줄에 한 글자만 남지 않게 */
+  h1, h2, h3{text-wrap:balance;}
+  p{text-wrap:pretty;}
+  /* <br class="pc-br"> : PC에서만 줄바꿈, 핸드폰(600px 이하)에서는 무시하고 자동 줄바꿈 */
+  @media (max-width:600px){ .pc-br{display:none;} }
+  /* 일본어 제목은 단어 덩어리 단위로 줄바꿈 (크롬) */
+  html:lang(ja) h1, html:lang(ja) h2, html:lang(ja) h3{word-break:auto-phrase;}
 </style>
 </head>
 <body>
@@ -417,7 +426,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="eyebrow">MYEONGDONG · SOY CRAB</div>
-    <h1 class="disp">Soy-Marinated Crab, <br>Fit for a King</h1>
+    <h1 class="disp">Soy-Marinated Crab, <br class="pc-br">Fit for a King</h1>
     <p>The dignity of a royal table, faithfully preserved.</p>
   </div>
 </section>
@@ -427,7 +436,7 @@
   <img src="../images/about1.jpeg" alt="Sura Gejang restaurant interior" class="about-img">
   <div class="about-text">
     <div class="eyebrow">01 · STORY</div>
-    <h2 class="disp">Preserving the Dignity<br>of the Royal Table</h2>
+    <h2 class="disp">Preserving the Dignity<br class="pc-br">of the Royal Table</h2>
     <p>Sura-sang was the table set before the Joseon kings each day. Only one kind of food could be placed upon it: the &lsquo;real&rsquo; dishes made from carefully selected ingredients and true dedication. We carry that same spirit, serving our guests &lsquo;soy-marinated crab fit for the royal table.&rsquo;</p>
     <p>Ganjang gejang has long been treated as a prized dish — from the royal sura-sang of the Joseon court to an essential centerpiece of today's fine Korean dining. Sura Gejang honors that tradition, serving every meal with the dignity of a small palace in the heart of the city.</p>
   </div>
@@ -438,7 +447,7 @@
   <img src="../images/about2.jpeg" alt="Seasonal female crab from Yeonpyeong Island" class="about-img">
   <div class="about-text">
     <div class="eyebrow">02 · INGREDIENTS</div>
-    <h2 class="disp">Only Seasonal Female Crab<br>from Yeonpyeong Island</h2>
+    <h2 class="disp">Only Seasonal Female Crab<br class="pc-br">from Yeonpyeong Island</h2>
     <p>The flavor of ganjang gejang comes down to the freshness of the crab itself. We use only seasonal female crab caught in the waters off Yeonpyeong Island, hand-selecting each one for its rich roe through a strict screening process. Preserving that traditional flavor, no matter the season or catch, is our guiding principle.</p>
   </div>
 </section>
@@ -448,7 +457,7 @@
   <img src="../images/about3.jpeg" alt="Freshly steamed rice with soy-marinated crab" class="about-img">
   <div class="about-text">
     <div class="eyebrow">03 · TASTE</div>
-    <h2 class="disp">A Full Table,<br>a True Rice Thief</h2>
+    <h2 class="disp">A Full Table,<br class="pc-br">a True Rice Thief</h2>
     <p>Deeply aged ganjang gejang meets freshly steamed rice to create a true &lsquo;rice thief&rsquo; — the dish so good it makes you eat bowl after bowl. Add 1++ Korean beef yukhoe, spicy sura crab stew, and seafood pancake, and you have a hearty table that goes far beyond a single plate of crab.</p>
   </div>
 </section>

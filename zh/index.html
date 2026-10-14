@@ -373,6 +373,15 @@
   @media (max-width:640px){
     .reserve-menu{right:auto;left:50%;transform:translateX(-50%);}
   }
+
+  /* ---------- 자동 줄바꿈 ---------- */
+  /* 제목은 두 줄 길이를 고르게, 문단은 마지막 줄에 한 글자만 남지 않게 */
+  h1, h2, h3{text-wrap:balance;}
+  p{text-wrap:pretty;}
+  /* <br class="pc-br"> : PC에서만 줄바꿈, 핸드폰(600px 이하)에서는 무시하고 자동 줄바꿈 */
+  @media (max-width:600px){ .pc-br{display:none;} }
+  /* 일본어 제목은 단어 덩어리 단위로 줄바꿈 (크롬) */
+  html:lang(ja) h1, html:lang(ja) h2, html:lang(ja) h3{word-break:auto-phrase;}
 </style>
 </head>
 <body>
@@ -427,7 +436,7 @@
   <img src="../images/about1.jpeg" alt="水剌酱蟹 店内环境" class="about-img">
   <div class="about-text">
     <div class="eyebrow">01 · STORY</div>
-    <h2 class="disp">御膳的品格原汁呈现</h2>
+    <h2 class="disp">御膳的品格<br class="pc-br">原汁呈现</h2>
     <p>御膳，是朝鲜国王每日面对的餐桌。能登上御膳的食物只有一种，那就是用精选食材与用心制作而成的&ldquo;真正&rdquo;的料理。我们秉承这份精神，为客人奉上&ldquo;登上御膳的酱蟹&rdquo;。</p>
     <p>酱蟹自朝鲜王朝的御膳，到如今成为高级韩定食中不可或缺的招牌菜，一直备受珍视。水剌酱蟹不忘这份传统，在都市中的这座小小&ldquo;宫殿&rdquo;里，用心奉上一顿配得上御膳品格的料理。</p>
   </div>
@@ -448,7 +457,7 @@
   <img src="../images/about3.jpeg" alt="刚出锅的米饭与酱蟹套餐" class="about-img">
   <div class="about-text">
     <div class="eyebrow">03 · TASTE</div>
-    <h2 class="disp">满满一桌，真正的下饭神器</h2>
+    <h2 class="disp">满满一桌，<br class="pc-br">真正的下饭神器</h2>
     <p>深度熟成的酱蟹与刚出锅的热米饭相遇，成就了真正的&ldquo;下饭神器&rdquo;。再加上1++韩牛生拌肉、香辣的水剌螃蟹汤，以及海鲜煎饼——不止一碟酱蟹，而是满满一桌丰盛的美味。</p>
   </div>
 </section>
