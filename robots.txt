@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suragejang.com/sitemap.xml
