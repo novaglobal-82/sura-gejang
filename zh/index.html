@@ -663,7 +663,7 @@
 
 <!-- ===== 플로팅 예약/전화 버튼 ===== -->
 <div class="floating-cta">
-  <a href="tel:+82-10-8360-4679" class="floating-btn call" onclick="gtag('event','phone_click',{source:'floating'})">
+  <a href="tel:+82-10-8360-4679" class="floating-btn call" onclick="gtag('event','phone_click',{position:'floating'})">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
@@ -671,9 +671,9 @@
   </a>
   <div class="reserve-dropdown">
     <div class="reserve-menu" id="reserveMenu">
-      <a href="https://www.catchtable.net/shop/suragejang" target="_blank" rel="noopener" onclick="gtag('event','reservation_click',{method:'catchtable',source:'floating'})">CatchTable</a>
-      <a href="https://map.naver.com/p/entry/place/2025015878?c=14.96,0,0,0,dh&placePath=%2Fbooking%3FfromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609231551%26locale%3Dko%26svcName%3Dmap_pcv5" target="_blank" rel="noopener" onclick="gtag('event','reservation_click',{method:'naver',source:'floating'})">Naver</a>
-      <a href="https://autoreserve.com/ko/restaurants/dtm53gCFGdhuft6DYiPD" target="_blank" rel="noopener" onclick="gtag('event','reservation_click',{method:'autoreserve',source:'floating'})">AutoReserve</a>
+      <a href="https://www.catchtable.net/shop/suragejang" target="_blank" rel="noopener" onclick="gtag('event','reservation_click',{method:'catchtable',position:'floating'})">CatchTable</a>
+      <a href="https://map.naver.com/p/entry/place/2025015878?c=14.96,0,0,0,dh&placePath=%2Fbooking%3FfromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609231551%26locale%3Dko%26svcName%3Dmap_pcv5" target="_blank" rel="noopener" onclick="gtag('event','reservation_click',{method:'naver',position:'floating'})">Naver</a>
+      <a href="https://autoreserve.com/ko/restaurants/dtm53gCFGdhuft6DYiPD" target="_blank" rel="noopener" onclick="gtag('event','reservation_click',{method:'autoreserve',position:'floating'})">AutoReserve</a>
     </div>
     <a href="javascript:void(0)" class="floating-btn reserve" onclick="toggleReserveMenu()">立即预约</a>
   </div>
